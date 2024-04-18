@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Book</title>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark sticky-top">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-secondary">My Account</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Rankings</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Authors</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+    <div class="container text-bg-light w-75" style="margin-top:20px;">
+        <div class="row">
+            <div class="d-flex col-4 offset-1 justify-content-center align-items-center">
+                <div class="p-10">
+                    <img src="./photos/male_zycie.jpg" class="p-5" style="width: 420px;">
+                </div>
+            </div>
+            <div class="d-flex flex-column col align-items-center">
+              <h2 class="pt-5">Małe życie</h2>
+              <span class="badge text-bg-secondary rounded-pill align-middle" style="display:flex; align-items: center; width:50px;">
+                7.9
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" style="margin-left: 5px;" class="bi bi-star-fill" viewBox="0 0 16 16">
+                   <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                 </svg>
+               </span> 
+               <ul class="list-group pt-3">
+                <li class="list-group-item">author: Hanya Yanagihara</li>
+                <li class="list-group-item">release year: 2015</li>
+                <li class="list-group-item">genre: foreign fiction</li>
+              </ul>
+              <div class="description p-5 pt-4 text-bg-muted">Poruszający obraz dojrzewania, sukcesu, traumy i przyjaźni. Najgłośniejsza amerykańska powieść 2015 roku, która wzbudziła falę zachwytu, a zarazem gorącą dyskusję wśród krytyków i czytelników.
+
+                Pochodząca z Hawajów amerykańska pisarka opisuje kilkadziesiąt lat z życia czterech przyjaciół. Bohaterów powieści poznajemy w chwili, gdy kończą studia i przenoszą się do Nowego Jorku. Przetrwanie, nie mówiąc już o sukcesie, w jednym z najwspanialszych miast świata nie jest łatwe, lecz szczęście wydaje się im sprzyjać. Pełen temperamentu JB jest malarzem i z czasem zaczyna brylować w kręgach nowojorskiej bohemy. Malcolm zostaje uznanym architektem, a Willem robi błyskotliwą karierę aktorską. Najbardziej tajemniczy z nich, Jude, przejawia wybitny talent matematyczny, a jako prawnik również odnosi sukces za sukcesem. W przeciwieństwie do przyjaciół nigdy jednak nie wspomina o swojej przeszłości ani o rodzinie, choć poważne problemy zdrowotne i emocjonalne wskazują na to, że w jego życiu wydarzyło się coś, o czym nie potrafi zapomnieć
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 B-Project, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+</body>
+</html>
