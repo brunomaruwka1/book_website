@@ -16,11 +16,14 @@ class Customer(models.Model):
     def __str__(self):
         return self.name
     
+class LiteraryGenre(models.Model):
+    title = models.CharField(max_length=55)
+
 class Book(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     first_relase_date = models.DateField()
-    literary_genre = models.CharField(max_length=50)
+    literary_genre = models.ForeignKey(LiteraryGenre, on_delete=models.PROTECT)
     # cover = models.ImageField(upload_to='sciezka/do/katalogu')
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
@@ -30,5 +33,4 @@ class Opinion(models.Model):
     opinion = models.TextField()
     rating = models.IntegerField()  # możesz dodać pole oceny
 
-    class Meta:
-        unique_together = ('customer', 'book')
+   
