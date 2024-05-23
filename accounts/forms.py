@@ -15,3 +15,27 @@ class CreateUserForm(UserCreationForm):
         model = User
         fields = ['username','email','password1',
                   'password2']
+
+class CustomerSignUpForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+    name = forms.CharField(max_length=200, required=True)
+    last_name = forms.CharField(max_length=200, required=True)
+    phone = forms.CharField(max_length=200, required=True)
+
+    class Meta:
+        model = User
+        fields = ['email','name', 'last_name', 'phone']
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = self.cleaned_data['email']
+        if commit:
+            user.save()
+            customer = Customer.objects.create(
+                
+                name=self.cleaned_data['name'],
+                last_name=self.cleaned_data['last_name'],
+                phone=self.cleaned_data['phone'],
+                email=self.cleaned_data['email']
+            )
+        return user

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Author(models.Model):
     name = models.CharField(max_length=255)
@@ -7,6 +8,7 @@ class Author(models.Model):
     nationality = models.CharField(max_length=255)
 # Create your models here.
 class Customer(models.Model):
+    # USERNAME_FIELD = models.CharField(max_length=20, null=True)
     name = models.CharField(max_length=200, null=True)
     last_name = models.CharField(max_length=200, null=True) 
     phone = models.CharField(max_length=200, null=True)

@@ -21,9 +21,11 @@
               <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             </ul>
     
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-            </form>
+            <form id="search-form" method="GET">
+              <input type="search" id="search-input" class="form-control" placeholder="Search...">
+          </form>
+          <div id="search-results"></div>
+          
     
             <div class="text-end">
               <button type="button" class="btn btn-outline-light me-2">Login</button>
@@ -75,5 +77,17 @@
       </div>
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script>
+
+// Nasłuchuje na naciśnięcie klawisza Enter na polu wyszukiwania
+document.getElementById('search-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); 
+        let query = document.getElementById('search-input').value;
+        document.getElementById('search-form').submit(); 
+    }
+});
+
+</script>
 </body>
 </html>
